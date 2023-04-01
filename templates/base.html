@@ -1,3 +1,4 @@
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <title>Tweet App</title>
+    <link rel="stylesheet" href="{% static 'tweetapp/customform.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
@@ -21,6 +23,12 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'tweetapp:addtweet' %}">Add Tweet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'tweetapp:addtweetbyform' %}">Add Tweet By Form</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'tweetapp:addtweetbymodelform' %}">Add Tweet By Model Form</a>
               </li>
             </ul>
           </div>
