@@ -1,5 +1,5 @@
 .tweetform{
-    border: 8px solid black;
+    border: 3px solid cornflowerblue;
     padding: 10px;
 }
 
@@ -8,8 +8,4 @@
     width: 200px;
     height: 100px;
     padding: 10px;
-}
-
-#card-header{
-    background-color: cornflowerblue;
 }
