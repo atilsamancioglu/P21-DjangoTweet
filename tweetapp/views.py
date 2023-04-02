@@ -56,3 +56,11 @@ class SignUpView(CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('login')
     template_name = "registration/signup.html"
+
+
+@login_required
+def deletetweet(request, id):
+   tweet = models.Tweet.objects.get(pk=id)
+   if request.user == tweet.username:
+      models.Tweet.objects.filter(id=id).delete()
+      return redirect('tweetapp:listtweet')
