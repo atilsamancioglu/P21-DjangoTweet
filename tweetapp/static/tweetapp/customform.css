@@ -9,3 +9,7 @@
     height: 100px;
     padding: 10px;
 }
+
+#card-header{
+    background-color: cornflowerblue;
+}

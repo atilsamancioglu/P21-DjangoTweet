@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 
 {%block content%}
-<h1>ListTweet Page</h1>
-<ul>
+<div class="container">
     {%for tweet in tweets%}
-        <li><h2>{{tweet.nickname}} --> {{tweet.message}}</h2></li>
+    <div class="card" style="padding: 5px;">
+        <div class="card-header" style="background-color: cornflowerblue;">
+           <h4> {{tweet.nickname}}</h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{tweet.message}}</p>
+        </div>
+    </div>
     {%endfor%}
-</ul>
+</div>
 {%endblock%}

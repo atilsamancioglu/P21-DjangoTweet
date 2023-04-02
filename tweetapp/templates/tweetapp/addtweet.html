@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {%block content%}
-<h1>AddTweet Page</h1>
 <form action="" method="POST">
     {% csrf_token %}
+    <div class="container">
     <div class="mb-3">
       <label for="nickname" class="form-label">Nickname</label>
       <input type="text" class="form-control" id="nickname" name="nickname">
@@ -13,5 +13,6 @@
       <input type="text" class="form-control" id="message" name="message">
     </div>
     <button type="submit" class="btn btn-primary">Send Tweet</button>
+  </div>
   </form>
 {%endblock%}
