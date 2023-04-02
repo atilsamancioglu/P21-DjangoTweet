@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{%block content%}
+{%if user.is_authenticated%}
+<h2 style="padding: 10px;">Welcome {{user.username}}</h2>
+
+{%else%}
+
+<form method="POST" action="{% url 'login' %}">
+<div class="container" style="border: 4px solid rgb(57, 112, 214); padding: 8px;">
+    <form action="" method="POST">
+        {% csrf_token %}
+
+    {%for field in form%}
+    <div class="mb-3">
+        {{field.label_tag}}
+        {{field}}
+    </div>    
+    {%endfor%}
+
+   <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+
+</form>
+{%endif%}
+
+{%endblock%}
